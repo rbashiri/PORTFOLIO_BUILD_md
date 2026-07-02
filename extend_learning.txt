@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+What does it do?
+It tells the browser:
+"This document is an HTML5 webpage."
+Without it, the browser may display the page incorrectly.
+==================================================================
+2.
+<html lang="en">
+
+This starts the HTML document.
+
+lang="en" tells browsers and search engines that the page is written in English.
+===============================================================================
+3.
+<head>
+The <head> contains information about the webpage.
+The user doesn't see it directly.
+Examples:
+
+page title
+CSS
+fonts
+metadata
+======================================================================================================
+4.
+<meta charset="UTF-8">
+
+This tells the browser:
+
+Use UTF-8 character encoding.
+
+It allows characters like:
+
+é
+ü
+©
+✓
+
+to display correctly.
+========================================================================================================
+5.
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+This is very important.
+
+It makes the website responsive on:
+
+phones
+tablets
+laptops
+
+Without it, your page won't display properly on mobile devices.
+======================================================================================================================
+6.
+<title>Robabeh Bashiri | Portfolio</title>
+
+This text appears in the browser tab.
+
+Example:
+
+Robabeh Bashiri | Portfolio
+==================================================================================================================
+7.
+<link rel="stylesheet"
+      href="assets/css/style.css">
+
+This connects your CSS file.
+
+Think of it like this:
+
+HTML  --------->  CSS
+
+HTML = structure
+
+CSS = design
+
+8.
+<body>
+
+</body>
+
+Everything the visitor sees goes inside <body>.
+
+For example:
+
+your photo
+your name
+your projects
+buttons
+contact information
