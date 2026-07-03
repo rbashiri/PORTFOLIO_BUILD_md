@@ -131,3 +131,17 @@ go to the assets folder
 then open the images folder
 then load profile.jpg
 ======================================================================================================
+<header>
+
+    <div>
+
+        <img src="assets/images/profile.jpg" alt="Profile photo">
+
+    </div>
+
+</header>
+What is <div>?
+
+Think of a <div> as a box.
+
+Later, we'll use CSS to move this entire box wherever we want.
