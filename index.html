@@ -2,37 +2,49 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Robabeh Bashiri | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js"></script>
 
 </head>
 
 <body>
 
 	<header>
+    	<nav class="navbar">
 
-		<div class ="hero-image"> 
+        <div class="logo">
+            <img src="./assets/icons/personal-brand-monogramm-0.4.png" alt="Personal Logo">
+        </div>
 
-       		<img src = "assets/images/profile.jpg" alt="Profile photo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-		</div>
+    	</nav>
+	</header>
+    
+	<section class = "hero">
+    	<div class="hero-image">
+        	<img src="assets/images/profile.png" alt="Profile photo">
+    	</div>
+    	<div class="hero-content">
+			<h2>Hello, I'm</h2>
+			<h1  class="section-title">Dr. Robabeh Bashiri</h1>
+			 <h3 class="highlight-tagline">Materials Scientist | Data Scientist </h3>
 
-		<div class="hero-content">
-			  <h2>Hello, I'm</h2>   
-
-        	<h1>Dr. Robabeh Bashiri</h1>
-			<h3>Materials Scientist | Data Scientist</h3>
-            <div class="skills">
+        	<div class="skills">
 
 				<span>
 					<i class="fa-brands fa-python"></i> Python
+					
 				</span>
-
 				<span class="dot">•</span>
 
 				<span>
@@ -46,26 +58,34 @@
 				</span>
 
 			</div>
+        <div class="tagline">
 
-			<p class="tagline">
-				 
-				<span class = "line1">
-					<img src="assets/images/material-ai-icon.png" alt="Materials Science Icon" class="tagline-icon">
-					Bridging materials science and machine learning
-				</span>
-				
-				<span class="line2">
-					for smarter materials and sustainable energy.
-				</span>
-			</p>
+    <img src="assets/images/material-ai-icon.png"
+         alt="Materials Science Icon"
+         class="tagline-icon">
 
-		
-		</div>
-	</header>
+    <div class="tagline-text">
+
+        <div class="line1">
+            Bridging
+            <span class="highlight">materials science</span>
+            and
+            <span class="highlight">machine learning</span>
+        </div>
+
+        <div class="line2">
+            for smarter materials and
+            <span class="highlight">sustainable energy</span>.
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+    </section>
 
 </body>
 
-
 </html>
-
-
+ 
