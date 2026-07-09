@@ -291,13 +291,9 @@ html{
 .resume-btn:hover{
 
     background:#4da3ff;
-
     border-color:#4da3ff;
-
     color:#ffffff;
-
     transform:translateY(-4px);
-
     box-shadow:0 0 25px rgba(77,163,255,.6);
 }
 
@@ -310,33 +306,76 @@ html{
 =========================== */
 
 #about{
-    padding:100px 10%;
-    color:white;
+    padding:30px 8%;
+    background:#ffffff;
 }
 
-#about h2{
-    font-size:3rem;
+.about-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.about-left{
+    flex:1.1;
+}
+
+.about-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+.expo-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+    transition:.3s;
+    max-width:400px;
+
+}
+.expo-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+.expo-card img{
+    width:100%;
+    display:block;
+
+}
+.expo-card figcaption{
+    padding:18px;
     text-align:center;
-    margin-bottom:50px;
-    color:#4da3ff;
 }
 
-#about p{
-    font-size:1.3rem;
-    line-height:1.8;
-    margin-bottom:25px;
-    text-align:justify;
-}
-
-#about strong{
-    color:#4da3ff;
+.expo-card h3{
+    font-size:1.35rem;
+    color:#1f4fbf;
+    margin-bottom:8px;
     font-weight:700;
 }
 
-.fun-fact{
+.expo-card p{
+    font-size:0.95rem;
+    color:#666;
+    margin:0;
     font-style:italic;
-    border-left:4px solid #4da3ff;
-    padding-left:20px;
-    margin-top:40px;
-    color:#d9e7ff;
+    line-height:1.5;
+}
+.about-left h2{
+    font-size:3rem;
+    color:#1f5fd8;
+    margin-bottom:3px;
+
+}
+.about-left p{
+    font-size:1.2rem;
+    line-height:1.9;
+    color:#4a4a4a;
+    text-align:justify;
+    max-width:650px;
 }
