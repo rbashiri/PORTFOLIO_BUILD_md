@@ -18,10 +18,13 @@ body{
     overflow-x:hidden;
     background:#ffffff;
     color:#222;
-   
     font-family:"Times New Roman", Times, serif;
 }
-
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
 header{
     position:absolute;
     top:0;
@@ -306,7 +309,7 @@ html{
 =========================== */
 
 #about{
-    padding:30px 8%;
+    padding:30px 0%;
     background:#ffffff;
 }
 
@@ -315,8 +318,6 @@ html{
     justify-content:space-between;
     align-items:stretch;
     gap:80px;
-    max-width:1300px;
-    margin:auto;
 }
 
 .about-left{
