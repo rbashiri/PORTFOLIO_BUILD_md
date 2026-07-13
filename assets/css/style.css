@@ -25,35 +25,135 @@ body{
     margin: 0 auto;
     padding: 0 5%;
 }
+/*================ REUSABLE SECTION TITLE ================*/
+
+.section-title{
+    font-size:3rem;
+    color:#1f5fd8;
+    font-weight:700;
+    margin-bottom:0;
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:140px;
+    height:5px;
+    background:#1f5fd8;
+    border-radius:10px;
+    margin-top:2px;
+    margin-bottom:18px;
+}
+
+/* ===========================
+      REUSABLE BUTTON
+=========================== */
+
+.primary-btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#1f5fd8;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:700;
+    border:none;
+    font-family: inherit;
+    border-radius:30px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.primary-btn:hover{
+    background:#1649aa;
+    transform:translateY(-3px);
+}
+.primary-btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#1f5fd8;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:700;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.primary-btn:hover{
+    background:#1649aa;
+    transform:translateY(-3px);
+}
+
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
 header{
     position:absolute;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
-    padding:20px 50px;
+    padding:10px 0px;
 }
-
+/* NAVIGATION */
 header .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-
+/* LOGO */
 header .navbar .logo{
     display:inline-block;
+    
 }
 
 header .navbar .logo img{
-    height:60px;
-    width:auto;
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    background:#082b63;
+    padding:8px;
+    border-radius:50%;
+    border:2px solid #4da3ff;
+    /* 3D Effect */
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.35),
+        inset 0 2px 3px rgba(255,255,255,.25),
+        inset 0 -2px 4px rgba(0,0,0,.25);
 
-    transition:
-        transform .8s cubic-bezier(.4,0,.2,1),
-        filter .3s ease;
+    transition:all .4s ease;
 }
+/* NAVIGATION LINKS */
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:1.2rem;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:30px;
+    transition:.3s;
+}
+.nav-links a:hover{
 
+    background:#4da3ff;
+    color:white;
+
+}
+html{
+    scroll-behavior:smooth;
+}
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
 
 .hero{
     background-image:url("../images/background.jpg");
@@ -61,12 +161,12 @@ header .navbar .logo img{
     background-position:center;
     background-repeat:no-repeat;
     color:white;
-    min-height:40vh;
+    min-height:10vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:50px;
-    padding:100px 8% 40px;
+    gap:0px;
+    padding:20px 8% 30px;
 }
 
 @media (min-width: 1200px) {
@@ -75,80 +175,96 @@ header .navbar .logo img{
         padding-left: 10%;
     }
 }
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
 .hero-image{
     width:40%;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-top:-100px;
-    margin-right:40px; 
-    margin-left:-100px;
-    perspective: 1000px;
-}
+    margin-top:10px;
+    margin-left:-10px;
+    perspective:1000px;
+} 
 
 .hero-image img{
-    width:320px;
-    height:420px;
+   width:360px;
+    height:360px;
     object-fit:cover;
-    object-position:center -5%;
+    object-position:center 40%;
     border-radius:50%;
-    transform:translateX(0px);
-     margin-right:60px;
+    margin-left:-150px;
+    transform:translateX(0);
+    margin-right:0px;
+   
 }
-    .hero-content {
+/* =====================================================
+   HERO TEXT
+===================================================== */
+.hero-content {
         flex: 1;
         width:55%;
         max-width:750px;
         text-align: left;
-        margin-left:-150px;
-        margin-top:0px;
-
-
-    }
-
-    .hero-content h1 {
+        margin-left:-130px;
+        margin-top:60px;
+}
+.hero-name{
+    font-size:2.8rem;
+    font-weight:700;
+    font-style:italic;
+    line-height:1.1;
+    margin-bottom:12px;
+}
+.hero-content h1 {
         font-size: 3rem;
         font-weight: 700;
         font-style: italic;
         line-height: 1.1;
         margin-bottom:12px;
+        margin-left:100px
         
         
-    }
+}
 
-    .hero-content h2 {
+.hero-content h2 {
         font-size: 2rem;
         color:#53b8ff;
         margin-bottom:10px;
-    }
+       
+}
 
-    .hero-content h3 {
+.hero-content h3 {
         font-size: 2rem;
         margin-bottom: 10px;
-        color:#53b8ff;
-        
-       
-          
-    }
+        color:#53b8ff; 
+        margin-left:90px 
+    
+}
+/* =====================================================
+   SKILLS
+===================================================== */
 
-    .hero-content .skills {
+.hero-content .skills {
         display:flex;
         justify-content:flex-start;
         gap:20px;
         margin-bottom:35px;
         font-size:1.4rem;
         transition:margin 0.3s ease;
-        margin-right:70px;
+        margin-left:100px;
     }
-    .python-icon{
+.python-icon{
     color:#FFD43B;
 }
 
-    .ml-icon{
+.ml-icon{
     color:#4DA3FF;
 }
-
-   .sql-icon{
+ .sql-icon{
     color:#2196F3;
 }   
 .hero-content .tagline{
@@ -157,7 +273,8 @@ header .navbar .logo img{
     margin-top:50px;
     font-size:1.6rem;
     line-height:1.7;
-    margin-left:-30px;
+    margin-left:15px;
+   
 }
 
 .hero-content .tagline-icon{
@@ -169,13 +286,13 @@ header .navbar .logo img{
     object-fit:contain;
     flex-shrink:0;
     box-shadow:0 4px 10px rgba(0,0,0,.25);
-
     animation:floatIcon 3s ease-in-out infinite;
+    margin-top:8px;
 }
 
 .tagline-text{
-    margin-left:25px;
-    margin-top:0px;
+    margin-left:18px;
+    margin-top:-30px;
 }
 
 .line1{
@@ -184,9 +301,7 @@ header .navbar .logo img{
     line-height:1.5;
     margin-right:30px;
    
-  
 }
-
 .line2{
     margin-top:8px;
     margin-left:0;
@@ -216,81 +331,38 @@ header .navbar .logo img{
         color:#ff744d;
         text-shadow:0 0 8px rgba(219, 255, 77, 0.6);
     }
-
     50%{
         color:#ffffff;
         text-shadow:0 0 18px rgba(255,255,255,.9);
     }
 }
-header .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:1.2rem;
-    font-weight:600;
-
-    padding:10px 18px;
-
-    border-radius:30px;
-
-    transition:.3s;
-}
-.nav-links a:hover{
-
-    background:#4da3ff;
-
-    color:white;
-
-}
-html{
-    scroll-behavior:smooth;
-}
+/* =====================================================
+   HERO BUTTON
+===================================================== */
 .hero-buttons{
     text-align:center;
-    margin-top:-10px;
-    margin-left:-250px;  
+    margin-top:45px;
+    margin-left:-250px; 
 }
 
 .resume-btn{
 
     display:inline-block;
-
     min-width:320px;
-
     padding:18px 40px;
-
     border:2px solid #ffffff;
-
     border-radius:12px;
-
     background:transparent;
-
     color:#ffffff;
-
     font-size:1.3rem;
-
     font-weight:700;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
     text-decoration:none;
-
     text-align:center;
-
     transition:all .35s ease;
+    margin-left: 150px;
 }
-
 .resume-btn:hover{
 
     background:#4da3ff;
@@ -370,22 +442,6 @@ html{
     font-style:italic;
     line-height:1.5;
 }
-.about-left h2{
-    font-size:3rem;
-    color:#1f5fd8;
-    margin-bottom:0;
-}
-
-.about-left h2::after{
-    content:"";
-    display:block;
-    width:140px;
-    height:5px;
-    background:#1f5fd8;
-    border-radius:10px;
-    margin-top:2px;
-    margin-bottom:18px;
-}
 
 .about-left p{
     font-size:1.2rem;
@@ -394,11 +450,7 @@ html{
     text-align:justify;
     max-width:650px;
 }
-
-
-
 /*================ FEATURED PROJECTS ================*/
-
 #projects{
     padding:10px 5% 80px;
     background:#fff;
@@ -422,7 +474,6 @@ html{
     margin-bottom:20px;  /* gap between line and cards */
     margin-left:0;       /* align line with title */
 }
-
 .projects-container{
     display:flex;
     justify-content:space-between;
@@ -430,7 +481,6 @@ html{
     max-width:1300px;
     margin:60px auto 0;
 }
-
 .project-card{
     flex:1;
     background:#fff;
@@ -439,22 +489,18 @@ html{
     box-shadow:0 12px 35px rgba(0,0,0,.15);
     transition:.3s;
 }
-
 .project-card:hover{
     transform:translateY(-8px);
     box-shadow:0 20px 45px rgba(0,0,0,.18);
 }
-
 .project-card>img{
     width:100%;
     height:22cqmax;
     object-fit:cover;
 }
-
 .project-content{
     padding:25px;
 }
-
 .project-card h3{
     display:flex;
     align-items:center;
@@ -464,7 +510,6 @@ html{
     font-weight:700;
     margin-bottom:18px;
 }
-
 .title-icon{
     width:45px;
     height:45px;
@@ -473,14 +518,12 @@ html{
     margin-right:10px;
     box-shadow:0 9px 30px rgba(0,0,0,.15);
 }
-
 .project-card p{
     font-size:1.1rem;
     line-height:1.8;
     color:#555;
     margin-bottom:25px;
 }
-
 .project-btn{
     display:inline-block;
     margin-top:20px;
@@ -493,25 +536,21 @@ html{
     transition:0.3s ease;
     box-shadow:0 6px 18px rgba(31,95,216,.3);
 }
-
 .project-btn:hover{
     background:#1649aa;
     transform:translateY(-3px);
     box-shadow:0 10px 24px rgba(31,95,216,.4);
 }
 /*================= TECHNICAL SKILLS =================*/
-
 #skills{
     padding:60px 8%;
     background:#ffffff;
 }
-
 #skills h2{
     font-size:3rem;
     color:#1f5fd8;
     margin-bottom:0;
 }
-
 #skills h2::after{
     content:"";
     display:block;
@@ -522,7 +561,6 @@ html{
     margin-top:8px;
     margin-bottom:30px;
 }
-
 .skills-container{
     max-width:1300px;
     margin:auto;
@@ -530,9 +568,7 @@ html{
     border:2px dashed #d9d9d9;
     border-radius:20px;
 }
-
 /*================ CONTACT =================*/
-
 #contact{
     padding:20px 8%;
     background-image:url("../images/background.jpg");
@@ -541,37 +577,30 @@ html{
     background-repeat:no-repeat;
     color:white;
     position:relative;
-    border-radius:90px;
-    
+    border-radius:90px;   
 }
-
 .contact-container{
     max-width:1300px;
     margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-    gap:110px;
-    
+    gap:110px;  
 }
-
 .contact-left{
     flex:1.2;
 }
-
 .contact-right{
     flex:0.8;
     padding-top:80px;   /* Adjust 60–120px as needed */
     margin-top:90px;      /* Move the whole right section down */
   
 }
-
 .contact-left h2{
     font-size:2rem;
     color:white;
     margin-bottom:0;
 }
-
 .contact-left h2::after{
     content:"";
     display:block;
@@ -580,17 +609,14 @@ html{
     background:#3f8cff;
     border-radius:10px;
     margin-top:10px;
-    margin-bottom:25px;
-    
+    margin-bottom:25px;  
 }
-
 .contact-left p{
     color:#d7d7d7;
     line-height:1.3;
     margin-bottom:20px;
     font-size:1.2rem;
 }
-
 .contact-left input,
 .contact-left textarea{
     width:100%;
@@ -601,32 +627,10 @@ html{
     font-size:1.1rem;
     outline:none;
 }
-
 .contact-left textarea{
     resize:none;
     height:180px; 
 }
-
-.contact-left button{
-
-    background:#1f5fd8;
-    color:white;
-    padding:10px 25px;
-    border:none;
-    border-radius:40px;
-    font-size:1.1rem;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
-    margin-bottom:10px;
-}
-
-.contact-left button:hover{
-
-    background:#4b86f8;
-    transform:translateY(-3px);
-}
-
 .contact-item{
 
     display:flex;
@@ -634,7 +638,6 @@ html{
     gap:20px;
     margin-bottom:10px;
 }
-
 .contact-item i{
 
     color:#ffffff;
@@ -645,7 +648,6 @@ html{
     border-radius:0;
     
 }
-
 .contact-item h4{
     font-size:1.rem;
     font-weight:700;
@@ -659,7 +661,6 @@ html{
     font-size:1.05rem;
     transition:.3s;
 }
-
 .contact-item a:hover{
     color:#4da3ff;
     text-decoration:underline;
