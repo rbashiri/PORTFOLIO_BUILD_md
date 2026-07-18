@@ -23,7 +23,7 @@ body{
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 100px;
 }
 /*================ REUSABLE SECTION TITLE ================*/
 
@@ -389,7 +389,7 @@ html{
     display:flex;
     justify-content:space-between;
     align-items:stretch;
-    gap:80px;
+    gap:50px;
 }
 
 .about-left{
@@ -400,32 +400,24 @@ html{
     flex:1;
     display:flex;
     justify-content:center;
+    margin-top:40px;
 }
 .expo-card{
-    background:white;
+    max-width:500px;
+    margin:0;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 12px 35px rgba(0,0,0,.15);
-    transition:.3s;
-    max-width:500px;
-
-}
-.expo-card:hover{
-    transform: translateX(8px);
-    transition: 0.3s ease;
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
-
 }
 .expo-card img{
     width:100%;
     display:block;
-    height:330px;
+    height:300px;
     object-fit:cover;
-
+    border-radius:20px;
 }
+
 .expo-card figcaption{
-    padding:18px;
-    text-align:center;
+  display:none;
 }
 
 .expo-card h3{
@@ -452,7 +444,7 @@ html{
 }
 /*================ FEATURED PROJECTS ================*/
 #projects{
-    padding:10px 5% 80px;
+    padding:10px 0% 80px;
     background:#fff;
 }
 
@@ -543,7 +535,7 @@ html{
 }
 /*================= TECHNICAL SKILLS =================*/
 #skills{
-    padding:60px 8%;
+    padding:60px 0%;
     background:#ffffff;
 }
 #skills h2{
@@ -592,8 +584,8 @@ html{
 }
 .contact-right{
     flex:0.8;
-    padding-top:80px;   /* Adjust 60–120px as needed */
-    margin-top:90px;      /* Move the whole right section down */
+    padding-top:60px;   /* Adjust 60–120px as needed */
+    margin-top:0px;      /* Move the whole right section down */
   
 }
 .contact-left h2{
